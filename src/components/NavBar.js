@@ -1,20 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import { Link } from "react-router-dom";
 import tub from "../tub.jpg";
 import { styled } from "@mui/material/styles";
 
-const CustomButton = styled(({ to, children, ...props }) => (
-  <Link to={to} {...props}>
-    {children}
-  </Link>
-))(({ theme }) => ({
-  color: "#1d2d44",
+const CustomButton = styled(Link)(({ theme }) => ({
+  color: "black",
   textDecoration: "none",
-  marginRight: "20px",
-  padding: "16px 24px",
-  fontSize: "25px",
+  marginLeft: "20px",
+  fontSize: "30px",
   "&:hover": {
     color: "#748cab",
     cursor: "pointer",
@@ -23,70 +18,54 @@ const CustomButton = styled(({ to, children, ...props }) => (
 
 const CustomAppBar = styled(AppBar)({
   backgroundColor: "white",
-  margin: 0,
-  boxShadow: "none",
   position: "fixed",
   zIndex: 1000,
   top: 0,
   left: 0,
+  right: 0,
+  height: "100px",
+  padding: "10px",
 });
 
 const NavBar = () => {
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isAboutOpen, setIsAboutOpen] = useState(false);
-
-  const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen);
-    setIsAboutOpen(false);
-  };
-
-  const toggleAbout = () => {
-    setIsAboutOpen(!isAboutOpen);
-    setIsServicesOpen(false);
-  };
-
   return (
     <nav>
       <CustomAppBar>
         <Toolbar>
-          <Link to="/">
-            <img src={tub} alt="Logo" style={{ marginRight: "16px" }} />
-          </Link>
-          <CustomButton to="/" className="customFont">
-            Home
-          </CustomButton>
-          <CustomButton className="customFont">
-            <div className="dropdown">
-              <span className="dropbtn" onClick={toggleServices}>
+          <img
+            src={tub}
+            alt="Logo"
+            style={{ height: "80px", marginLeft: "40px" }}
+          />
+          <ul
+            style={{ listStyle: "none", display: "flex", marginLeft: "auto" }}
+          >
+            <li>
+              <CustomButton to="/" className="customFont">
+                Home
+              </CustomButton>
+            </li>
+            <li>
+              <CustomButton to="/services" className="customFont">
                 Services
-              </span>
-              <div
-                className={`dropdown-content ${isServicesOpen ? "show" : ""}`}
-              >
-                <Link to="/services/refinishing">Refinishing</Link>
-                <Link to="/services/liners">
-                  Bathtub Liners/ Wall Surrounds
-                </Link>
-              </div>
-            </div>
-          </CustomButton>
-
-          <CustomButton className="customFont" to="/about">
-            <div className="dropdown">
-              <span className="dropbtn" onClick={toggleAbout}>
+              </CustomButton>
+            </li>
+            <li>
+              <CustomButton to="/about" className="customFont">
                 About Us
-              </span>
-              <div
-                className={`dropdown-content ${isServicesOpen ? "show" : ""}`}
-              >
-                <Link to="/about/faq">FAQs</Link>
-                <Link to="/about/employment">Employment</Link>
-              </div>
-            </div>
-          </CustomButton>
-          <CustomButton to="/contact" className="customFont">
-            Contact
-          </CustomButton>
+              </CustomButton>
+            </li>
+            <li>
+              <CustomButton to="/contact" className="customFont">
+                Contact
+              </CustomButton>
+            </li>
+            <li>
+              <CustomButton to="/faq" className="customFont">
+                FAQs
+              </CustomButton>
+            </li>
+          </ul>
         </Toolbar>
       </CustomAppBar>
     </nav>

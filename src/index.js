@@ -8,8 +8,6 @@ import Contact from "./components/contact";
 import Services from "./components/services";
 import QuoteForm from "./components/QuoteForm";
 import Faqs from "./components/FAQs";
-import Refinishing from "./components/refinishing";
-import Liners from "./components/liners";
 
 const App = () => {
   return (
@@ -22,9 +20,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
           <Route path="/quote" element={<QuoteForm />} />
-          <Route path="/about/faq" element={<Faqs />} />
-          <Route path="/services/refinishing" element={<Refinishing />} />
-          <Route path="/services/liners" element={<Liners />} />
+          <Route path="/faq" element={<Faqs />} />
         </Routes>
       </div>
     </BrowserRouter>
