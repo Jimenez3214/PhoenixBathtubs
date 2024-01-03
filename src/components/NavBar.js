@@ -86,7 +86,7 @@ const NavBar = () => {
             open={openDrawer}
             onClose={handleDrawerClose}
           >
-            <List>
+            <List style={{ padding: "10px", marginTop: "10px" }}>
               <ListItem disablePadding>
                 <ListItemButton
                   component={CustomButton}
