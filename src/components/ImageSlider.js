@@ -1,23 +1,23 @@
-import * as React from 'react';
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
-import tub1 from '../bathtub2.jpg';
-import tub2 from '../tub.jpg'
+import * as React from "react";
+import { useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
+import SwipeableViews from "react-swipeable-views";
+import { autoPlay } from "react-swipeable-views-utils";
+import tub1 from "../bathtub2.jpg";
+import tub2 from "../tub.jpg";
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
-    label: 'Before',
+    label: "Before",
     imgPath: tub1,
   },
   {
-    label: 'After',
+    label: "After",
     imgPath: tub2,
   },
 ];
@@ -42,7 +42,7 @@ const ImageSlider = () => {
     <Box sx={{ maxWidth: 500, maxHeight: 500, flexGrow: 1 }}>
       <Typography>{images[activeStep].label}</Typography>
       <AutoPlaySwipeableViews
-        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
@@ -54,10 +54,10 @@ const ImageSlider = () => {
                 component="img"
                 sx={{
                   height: 500,
-                  display: 'block',
+                  display: "block",
                   maxWidth: 1000,
-                  overflow: 'hidden',
-                  width: '100%',
+                  overflow: "hidden",
+                  width: "100%",
                 }}
                 src={step.imgPath}
                 alt={step.label}
@@ -68,20 +68,20 @@ const ImageSlider = () => {
       </AutoPlaySwipeableViews>
       <div>
         <Button
-          size="medium"
+          size="large"
           onClick={handleBack}
           disabled={activeStep === 0}
           startIcon={<KeyboardArrowLeft />}
         >
-          Back
+          Before
         </Button>
         <Button
-          size="medium"
+          size="large"
           onClick={handleNext}
           disabled={activeStep === images.length - 1}
           endIcon={<KeyboardArrowRight />}
         >
-          Next
+          After
         </Button>
       </div>
     </Box>

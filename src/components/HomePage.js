@@ -28,7 +28,10 @@ const Home = () => {
           textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
         }}
       >
-        <div className="content" style={{ textAlign: "center" }}>
+        <div
+          className="content"
+          style={{ textAlign: "center", color: "black" }}
+        >
           <Typography variant="h3" gutterBottom>
             LET'S REFINISH, NOT REPLACE.
           </Typography>
@@ -44,7 +47,7 @@ const Home = () => {
             style={{
               marginTop: 15,
               color: "white",
-              backgroundColor: "lightblue",
+              backgroundColor: "blue",
               borderRadius: "20px",
               fontSize: "20px",
               padding: "10px",
