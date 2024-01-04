@@ -151,12 +151,12 @@ const NavBar = () => {
             </IconButton>
           </CustomDrawer>
           <IconButton onClick={handleDrawerOpen} style={{ marginLeft: "auto" }}>
-            <MenuIcon style={{ fontSize: "50px" }} />
+            <MenuIcon style={{ fontSize: "50px", marginBottom: "50px" }} />
           </IconButton>
           <img
             src={tub}
             alt="Logo"
-            style={{ height: "80px", marginLeft: "40px" }}
+            style={{ height: "80px", marginLeft: "40px", padding: "10px" }}
           />
         </React.Fragment>
       ) : (
