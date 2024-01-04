@@ -2,8 +2,10 @@ import React from "react";
 import { Typography, Button, Container, Box } from "@mui/material";
 import backgroundImage from "../bathtub2.jpg";
 import ImageSlider from "./ImageSlider";
-import bathtub2 from "../bathtub2.jpg";
-import tub from "../tub.jpg";
+import tubBefore from "../img/tub_before.jpg";
+import tubAfter from "../img/tub_after.jpg";
+import tileBefore from "../img/tile_before.jpg";
+import tileAfter from "../img/tile_after.jpg";
 import { useNavigate } from "react-router";
 
 const Home = () => {
@@ -76,10 +78,10 @@ const Home = () => {
         </Typography>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <div className="img-slider" style={{ marginRight: "10px" }}>
-            <ImageSlider images={[bathtub2, tub]} />
+            <ImageSlider beforeImage={tubBefore} afterImage={tubAfter} />
           </div>
           <div className="img-slider">
-            <ImageSlider images={[tub, bathtub2]} />
+            <ImageSlider beforeImage={tileBefore} afterImage={tileAfter} />
           </div>
         </div>
       </div>

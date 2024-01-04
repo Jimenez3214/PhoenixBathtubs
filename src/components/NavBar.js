@@ -86,6 +86,11 @@ const NavBar = () => {
             open={openDrawer}
             onClose={handleDrawerClose}
           >
+            <img
+              src={tub}
+              alt="Logo"
+              style={{ height: "80px", marginRight: "40px" }}
+            />
             <List style={{ padding: "10px", marginTop: "10px" }}>
               <ListItem disablePadding>
                 <ListItemButton
@@ -148,6 +153,11 @@ const NavBar = () => {
           <IconButton onClick={handleDrawerOpen} style={{ marginLeft: "auto" }}>
             <MenuIcon style={{ fontSize: "50px" }} />
           </IconButton>
+          <img
+            src={tub}
+            alt="Logo"
+            style={{ height: "80px", marginLeft: "192px" }}
+          />
         </React.Fragment>
       ) : (
         <CustomAppBar>

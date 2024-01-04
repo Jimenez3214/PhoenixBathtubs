@@ -1,9 +1,11 @@
 import React from "react";
+import office from "../img/Phoenix.jpg";
 
 const About = () => {
   return (
     <div className="about-container">
       <h1 className="about-heading">About Us</h1>
+      <img src={office} alt="office" className="about-img" />
       <p className="about-text">
         Phoenix Bathtub Renewals, Inc. "Your source for affordable bathroom
         renovation" has been proudly serving the Chicago metropolitan area since

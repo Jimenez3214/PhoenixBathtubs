@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
-import tub from "../bathtub2.jpg";
+import tub from "../img/reglaze.jpg";
 
 const useStyles = makeStyles((theme) => ({
   container: {

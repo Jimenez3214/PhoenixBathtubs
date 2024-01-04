@@ -7,22 +7,13 @@ import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
-import tub1 from "../bathtub2.jpg";
-import tub2 from "../tub.jpg";
+import tubBefore from "../img/tub_before.jpg";
+import tubAfter from "../img/tub_after.jpg";
+import tileBefore from "../img/tile_before.jpg";
+import tileAfter from "../img/tile_after.jpg";
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const images = [
-  {
-    label: "Before",
-    imgPath: tub1,
-  },
-  {
-    label: "After",
-    imgPath: tub2,
-  },
-];
-
-const ImageSlider = () => {
+const ImageSlider = ({ beforeImage, afterImage }) => {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
 
@@ -38,8 +29,17 @@ const ImageSlider = () => {
     setActiveStep(step);
   };
 
+  const images = [
+    {
+      imgPath: beforeImage,
+    },
+    {
+      imgPath: afterImage,
+    },
+  ];
+
   return (
-    <Box sx={{ maxWidth: 500, maxHeight: 500, flexGrow: 1 }}>
+    <Box sx={{ maxWidth: 720, maxHeight: 600, flexGrow: 1 }}>
       <Typography>{images[activeStep].label}</Typography>
       <AutoPlaySwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
