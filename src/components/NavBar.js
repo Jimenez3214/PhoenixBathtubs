@@ -156,7 +156,7 @@ const NavBar = () => {
           <img
             src={tub}
             alt="Logo"
-            style={{ height: "80px", marginLeft: "192px" }}
+            style={{ height: "80px", marginLeft: "40px" }}
           />
         </React.Fragment>
       ) : (
