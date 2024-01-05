@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/static/js/main.4abf8da0.js",
+    "static/media/tub_before.jpg": "/static/media/tub_before.3879a6907d8709fb2742.jpg",
+    "static/media/Phoenix.jpg": "/static/media/Phoenix.7e073cf3d9fec6c5cff1.jpg",
+    "static/media/tub_after.jpg": "/static/media/tub_after.59ea2301a2a31769537e.jpg",
+    "static/media/tile_before.jpg": "/static/media/tile_before.16178fe1fc56c9d14c9f.jpg",
+    "static/media/tile_after.jpg": "/static/media/tile_after.7fda78e912e745daf563.jpg",
+    "static/media/bathtub2.jpg": "/static/media/bathtub2.a259c82034075864f304.jpg",
+    "static/media/reglaze.jpg": "/static/media/reglaze.c98bb034ecb951aafbc8.jpg",
+    "static/media/tub.jpg": "/static/media/tub.a015f9abddf8cb1f6430.jpg",
+    "index.html": "/index.html",
+    "main.4abf8da0.js.map": "/static/js/main.4abf8da0.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.4abf8da0.js"
+  ]
+}
