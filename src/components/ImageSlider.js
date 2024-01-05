@@ -39,13 +39,18 @@ const ImageSlider = ({ beforeImage, afterImage }) => {
   ];
 
   return (
-    <Box sx={{ maxWidth: 720, flexGrow: 1 }}>
+    <Box sx={{ maxWidth: 720, flexGrow: 1, margin: "auto" }}>
       <Typography>{images[activeStep].label}</Typography>
       <AutoPlaySwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
+        sx={{
+          display: "block",
+          maxWidth: "100%",
+          marginBottom: "10px", // Adjust spacing between images
+        }}
       >
         {images.map((step, index) => (
           <div key={step.label}>
@@ -65,7 +70,7 @@ const ImageSlider = ({ beforeImage, afterImage }) => {
           </div>
         ))}
       </AutoPlaySwipeableViews>
-      <div>
+      <div style={{ marginTop: "10px" }}>
         <Button
           size="large"
           onClick={handleBack}

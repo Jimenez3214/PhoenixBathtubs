@@ -76,7 +76,7 @@ const Home = () => {
         <Typography variant="h4" gutterBottom>
           Our Projects
         </Typography>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div>
           <div className="img-slider" style={{ marginRight: "10px" }}>
             <ImageSlider beforeImage={tubBefore} afterImage={tubAfter} />
           </div>
