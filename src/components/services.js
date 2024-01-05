@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
   },
   text: {
-    fontSize: "1.5rem",
+    fontSize: "25px",
     marginBottom: theme.spacing(2),
   },
   imageContainer: {
@@ -25,9 +25,9 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   image: {
-    width: "600px",
+    width: "100%",
     height: "auto",
-    borderRadius: theme.spacing(1),
+    borderRadius: theme.spacing(2),
   },
   sectionTitle: {
     marginBottom: theme.spacing(2),
