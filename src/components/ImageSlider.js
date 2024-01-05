@@ -53,7 +53,7 @@ const ImageSlider = ({ beforeImage, afterImage }) => {
               <Box
                 component="img"
                 sx={{
-                  height: "400px", // Set the desired height for both images
+                  height: "auto",
                   display: "block",
                   maxWidth: "100%",
                   width: "100%",
