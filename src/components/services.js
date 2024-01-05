@@ -7,21 +7,26 @@ import tub from "../img/reglaze.jpg";
 const useStyles = makeStyles((theme) => ({
   container: {
     display: "flex",
+    flexDirection: "column",
     alignItems: "center",
     padding: theme.spacing(2),
     marginBottom: theme.spacing(4),
   },
   textContainer: {
     flex: 1,
+    maxWidth: "600px",
+    width: "100%",
     padding: theme.spacing(2),
     textAlign: "left",
   },
   text: {
-    fontSize: "25px",
+    fontSize: "1.5rem",
     marginBottom: theme.spacing(2),
   },
   imageContainer: {
     flex: 1,
+    maxWidth: "600px",
+    width: "100%",
     textAlign: "center",
   },
   image: {
