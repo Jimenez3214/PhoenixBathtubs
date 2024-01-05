@@ -151,7 +151,7 @@ const NavBar = () => {
             </IconButton>
           </CustomDrawer>
           <IconButton onClick={handleDrawerOpen} style={{ marginLeft: "auto" }}>
-            <MenuIcon style={{ fontSize: "50px", marginBottom: "50px" }} />
+            <MenuIcon style={{ fontSize: "50px", marginBottom: "80px" }} />
           </IconButton>
           <img
             src={tub}
