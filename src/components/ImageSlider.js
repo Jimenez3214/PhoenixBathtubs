@@ -39,7 +39,7 @@ const ImageSlider = ({ beforeImage, afterImage }) => {
   ];
 
   return (
-    <Box sx={{ maxWidth: 720, maxHeight: 600, flexGrow: 1 }}>
+    <Box sx={{ maxWidth: 720, flexGrow: 1 }}>
       <Typography>{images[activeStep].label}</Typography>
       <AutoPlaySwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
@@ -53,10 +53,9 @@ const ImageSlider = ({ beforeImage, afterImage }) => {
               <Box
                 component="img"
                 sx={{
-                  height: 500,
+                  height: "400px", // Set the desired height for both images
                   display: "block",
-                  maxWidth: 1000,
-                  overflow: "hidden",
+                  maxWidth: "100%",
                   width: "100%",
                 }}
                 src={step.imgPath}
