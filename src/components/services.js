@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
   textContainer: {
     flex: 1,
     padding: theme.spacing(2),
+    textAlign: "left",
   },
   text: {
     fontSize: "1.5rem",
@@ -24,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   image: {
-    width: "100%",
+    width: "600px",
     height: "auto",
     borderRadius: theme.spacing(1),
   },
@@ -56,7 +57,6 @@ const Services = () => {
             costs.
           </Typography>
         </div>
-        {/* make this image into image slider when I have pics  */}
         <div className={classes.imageContainer}>
           <img src={tub} alt="Refinishing Example" className={classes.image} />
         </div>
@@ -75,7 +75,6 @@ const Services = () => {
             over replacement costs.
           </Typography>
         </div>
-        {/* make this image into image slider when I have pics  */}
         <div className={classes.imageContainer}>
           <img
             src={tub}
